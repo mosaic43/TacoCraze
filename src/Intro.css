@@ -1,0 +1,69 @@
+.Intro {
+    text-align: center;
+    background-image: url("space1.png");
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .App-logo {
+    height: 30vmin;
+  }
+  
+  /* .Intro-header {
+    background-image: url("/public/space1.png");
+    background-size: cover;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  } */
+  
+  .App-link {
+    color: #09d3ac;
+  }
+  /* The animation code */
+  @keyframes textChange {
+    5% {color: #09d3ac;}
+    20%   {color:rgb(233, 120, 248);}
+    20%  {color: yellow;}
+    20% {color: greenyellow;}
+    20%  {color: blue;}
+    20% {color: red}
+    20% {color: #09d3ac;}
+    20% {color: #09d3ac;}
+    20%   {color:rgb(233, 120, 248);}
+    20%  {color: yellow;}
+    20% {color: greenyellow;}
+    20%  {color: blue;}
+    50% {color: red}
+    100% {color: #09d3ac;}
+    10% {color: #09d3ac;}
+    25%   {color:rgb(233, 120, 248);}
+    25%  {color: yellow;}
+    25% {color: greenyellow;}
+    50%  {color: blue;}
+    50% {color: red}
+    100% {color: #09d3ac;}
+  }
+  
+  /* The element to apply the animation to */
+  /* div {
+    animation-name: textChange;
+    animation-duration: 4s;
+  } */
+  .text {
+    color: silver;
+    /* background-color: black; */
+    font-family: fantasy;
+    text-align: center;
+    /* width: 40vw;
+    height: 50vh; */
+    margin-top: 2%;
+    animation-name: textChange;
+    animation-duration: 25s;
+    font-size: calc(30px + 2vmin);
+  }
