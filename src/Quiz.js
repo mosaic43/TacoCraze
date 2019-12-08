@@ -1,83 +1,194 @@
 import React from 'react';
-import './Quiz.css';
+import Question from './Question';
+import QuestionCount from './QuestionCount';
+import AnswerOption from './AnswerOption';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
-class MultipleChoice extends React.Component {
-    constructor(props) {
-        super(props);
-        this.handleChange = this.handleChange.bind(this);
-        this.state = { 
-            questions: [
-                "What day is National Taco Day in the United States?",
-                "When tacos were invented around 1,000 and 500 B.C., what were the tortillas used for?",
-                "According to contemprary historian Jeffrey Pilchner, the first reference to the word taco was coined in the 1800s by?",
-                "Who invented the hard shell taco?",
-                "The first tacos trucks originated in?",
-                "The world's most expensive taco served at Frida in the Baja Peninsula costs?",
-                "The largest serving of tacos was ____ served by over ____ UberEATS drivers?"
-
-
-            ],
-            answers: [
-                "October 4th",
-                "An edible spoon to scoop up the ingredients.",
-                "Mexican silver miners who used the word tacos de minero which referenced the gunpowder pouches used in the silver mines.",
-                "Glenn Bell in the United",
-                "New York in 1966",
-                "$25,000",
-                "36,300 and 600"
-            ],
-            falseAnswer1: [
-                "November 3rd",
-                "The tortilla was the main dish and the rest of the ingredients were used as flavoring.",
-                "A Gautamalan newspaper which referenced taco de Kak'ik as a way to describe a spoon which the Mayans used to eat stew.",
-                "The Chili Queens in San Antonio",
-                "Los Angeles in 1974",
-                "$5,000",
-                "12,247 and 25",
-                
-
-            ],
-            falseAnswer2: [
-                "November 23rd",
-                "A flat bread.",
-                "El Universal, a Mexican newspaper, when describing a popular street food.",
-                "Agustin Gaytan in Mexico",
-                "Monterrey in 1985",
-                "$200",
-                "3,300 and 11",
-
-
-            ],
-            falseAnswer3: [
-                "April 15th",
-                "It was used as a plate.",
-                "The word taco was actually coined in the U.S, to describe the new street food in Los Angeles.",
-                "Hernando Cortez in Mexico",
-                "San Antonio in 1993",
-                "$25",
-                "7,200 and 49",
-
-            ],
-        }
-    }
-
- 
-
-
-}
-
-
-
-
-
-// function Quiz (){
+// function renderAnswerOptions(key) {
 //     return (
-//         <div className="Intro">
-
-//         </div>
+//       <AnswerOption
+//         key={key.content}
+//         answerContent={key.content}
+//         answerType={key.type}
+//         answer={props.answer}
+//         questionId={props.questionId}
+//         onAnswerSelected={props.onAnswerSelected}
+//       />
 //     );
+//   }
+
+function Quiz(props) {
+  function renderAnswerOptions(key) {
+    return (
+      <AnswerOption
+        key={key.content}
+        answerContent={key.content}
+        answerType={key.type}
+        answer={props.answer}
+        questionId={props.questionId}
+        onAnswerSelected={props.onAnswerSelected}
+      />
+    );
+  }
+    return (
+       <div className="quiz">
+         <QuestionCount
+           counter={props.questionId}
+           total={props.questionTotal}
+         />
+         <Question content={props.question} />
+         <ul className="answerOptions">
+           {props.answerOptions.map(renderAnswerOptions)}
+         </ul>
+       </div>
+    );
+  }
+  Quiz.propTypes = {
+    answer: React.PropTypes.string.isRequired,
+    answerOptions: React.PropTypes.array.isRequired,
+    counter: React.PropTypes.number.isRequired,
+    question: React.PropTypes.string.isRequired,
+    questionId: React.PropTypes.number.isRequired,
+    questionTotal: React.PropTypes.number.isRequired,
+    onAnswerSelected: React.PropTypes.func.isRequired
+  };
+
+  
+  export default Quiz;
+
+// ReactDOM.render(<Quiz />, document.getElementById('root'))
+
+
+
+
+// import React from 'react';
+// import './Quiz.css';
+// import Question from './Question';
+// import QuizQuestions from './QuizQuestions';
+// import update from 'react-addons-update';
+
+// // var update = require('react-addons-update');
+
+// function componentWillMount(){
+//     const shuffledAnswerOptions = QuizQuestions.map((question) => this.shuffleArray(question.answers));  
+//     this.setState({
+//       question: QuizQuestions[0].question,
+//       answerOptions: shuffledAnswerOptions[0]
+//     });
+//   };
+
+//   function shuffleArray(array) {
+//     var currentIndex = array.length, temporaryValue, randomIndex;
+//     while (0 !== currentIndex) {
+//       randomIndex = Math.floor(Math.random() * currentIndex);
+//       currentIndex -= 1;
+//       temporaryValue = array[currentIndex];
+//       array[currentIndex] = array[randomIndex];
+//       array[randomIndex] = temporaryValue;
+//     }
+//     return array;
+//   };
+// class MultipleChoice extends React.Component {
+//  constructor(props) {
+//     super(props);
+//     this.state = {
+//      counter: 0,
+//      questionId: 1,
+//      question: '',
+//      answerOptions: [],
+//      answer: '',
+//      answersCount: {
+//        true: 0,
+//        false: 0,
+//      },
+//      result: ''
+//     };
+//     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
+// };
 // }
 
+// function setUserAnswer(answer) {
+//     const updatedAnswerCount = update(this.state.answersCount, {
+//         [answer]: {$apply: (currentValue) => currentValue + 1}
+//     });
+//     this.setState({
+//         answersCount: updatedAnswerCount,
+//         answer: answer
+//     });
+// }
+
+// function setNextQuestion(){
+//     const counter = this.state.counter + 1;
+//     const questionId = this.state.questionId + 1;
+//     this.setState({
+//         counter:counter,
+//         questionId: questionId,
+//         question: QuizQuestions[counter].question,
+//         answerOptions: QuizQuestions[counter].answers,
+//         answer: ''
+//     });
+// }
+
+// function getResults () {
+//     const answersCount = this.state.answersCount;
+//     const answersCountKeys = Object.keys(answersCount);
+//     const answersCountValues = answersCountKeys.map((keys) => answersCount['key']);
+//     const maxAnswerCount = Math.max.apply(null, answersCountValues);
+//     return answersCountKeys.filter((key) => answersCount[key] === maxAnswerCount);
+// }
+
+// function setResults (result) {
+//     if (result.length ===1) {
+//         this.setState({ result: result[0] });
+//     } else {
+//         this.setState({ result: 'Undetermined' });
+//     }
+// }
+
+// function handleAnswerSelected(event) {
+//     this.setUserAnswer(event.currentTarget.value);
+//     if (this.state.questionId < QuizQuestions.length) {
+//         setTimeout (() => this.setNextQuestion(), 300);
+//     } else {
+//         setTimeout (()=> this.setResults(this.getResults()), 300);
+//     }
+// }
+
+// function Quiz(){
+// return (
+//     <div className="Quiz">
+//       <div className="QuizBox">
+//         <h2>React Quiz</h2>
+//       </div>
+//      <Quiz
+//         answer={this.state.answer}
+//         answerOptions={this.state.answerOptions}
+//         questionId={this.state.questionId}
+//         question={this.state.question}
+//         questionTotal={QuizQuestions.length}
+//         onAnswerSelected={this.handleAnswerSelected}
+//         />
+//         <Question content="What is your favourite food?" />
+//     </div>
+//   );  
+// }
+  
+
+// export default Quiz;
 
 
-ReactDOM.render(<Quiz />, document.getElementById('root'))
+
+// function Quiz(props) {
+//   return (
+//      <div className="quiz">
+//        <QuestionCount
+//          counter={props.questionId}
+//          total={props.questionTotal}
+//        />
+//        <Question content={props.question} />
+//        <ul className="answerOptions">
+//          {props.answerOptions.map(renderAnswerOptions)}
+//        </ul>
+//      </div>
+//   );
+// }

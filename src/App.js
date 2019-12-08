@@ -8,6 +8,8 @@ import { Switch } from 'react-router-dom';
 import Play from './Play.js';
 
 
+
+
 function App() {
   return (
     <div className="App">
@@ -25,25 +27,3 @@ function App() {
 }
 
 export default App;
-
-/* <a
-className="App-link"
-href="./Intro.js"
-target="_blank"
-rel="noopener noreferrer"
->
-Let's play!
-</a> */
-
-
-/* <Link to="/Intro">Let's Play</Link> */
-
-
-
-
-
-
-// <img src="taco.png" className="App-logo" alt="logo" />
-// <div className="text">
-//  Extreme Taco Craze
-// </div>

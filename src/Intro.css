@@ -49,21 +49,24 @@
     50% {color: red}
     100% {color: #09d3ac;}
   }
-  
-  /* The element to apply the animation to */
-  /* div {
-    animation-name: textChange;
-    animation-duration: 4s;
-  } */
+ 
   .text {
     color: silver;
-    /* background-color: black; */
     font-family: fantasy;
     text-align: center;
-    /* width: 40vw;
-    height: 50vh; */
     margin-top: 2%;
     animation-name: textChange;
     animation-duration: 25s;
     font-size: calc(30px + 2vmin);
+  }
+
+  .quizBox {
+    color: greenyellow;
+    width: 40%;
+    height: 50%;
+    background-color: black;
+    border-style: outset;
+    border-color: darkorchid;
+    border-width: 2%;
+  
   }
