@@ -16,7 +16,12 @@
     font-size: calc(10px + 2vmin);
     color: white;
   }
-  
+  .ul {
+    list-style: none !important;
+  }
+  .answerOptions {
+    list-style: none !important;
+  }
   .App-link {
     color: #09d3ac;
   }

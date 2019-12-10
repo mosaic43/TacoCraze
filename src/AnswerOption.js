@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 
   function AnswerOption(props) {
     return (
@@ -7,13 +8,13 @@ import React from 'react';
           type="radio"
           className="radioCustomButton"
           name="radioGroup"
-          checked={props.answerType === props.answer}
-          id={props.answerType}
-          value={props.answerType}
+          checked={props.isCorrect === props.answer}
+          id={props.answerContent}
+          value={props.isCorrect}
           disabled={props.answer}
           onChange={props.onAnswerSelected}
         />
-        <label className="radioCustomLabel" htmlFor={props.answerType}>
+        <label className="radioCustomLabel" htmlFor={props.answerContent}>
           {props.answerContent}
         </label>
       </li>
@@ -21,10 +22,10 @@ import React from 'react';
   }
 
   AnswerOption.propTypes = {
-    answerType: React.PropTypes.string.isRequired,
-    answerContent: React.PropTypes.string.isRequired,
-    answer: React.PropTypes.string.isRequired,
-    onAnswerSelected: React.PropTypes.func.isRequired
+    isCorrect: PropTypes.bool.isRequired,
+    answerContent: PropTypes.string.isRequired,
+    answer: PropTypes.string.isRequired,
+    onAnswerSelected: PropTypes.func.isRequired
   };
 
   export default AnswerOption;

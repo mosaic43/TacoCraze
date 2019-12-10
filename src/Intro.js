@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Switch } from 'react-router-dom';
-import Quiz from './Quiz.js';
-
+import TakeQuiz from './TakeQuiz.js';
 
   function Intro() {
     return (
@@ -15,15 +14,10 @@ import Quiz from './Quiz.js';
           Test
           </div>
           <div className="text">
-          <Router>
-          <Switch>
-        <Route path="/Quiz" component={Quiz} exact/>
-        <Route path="/Intro" component={Intro} exact/>
-        </Switch>
-        </Router>
+        
           </div>
           <div className="text">
-            <Link to="/Quiz">Start Quiz</Link>
+            <Link to="/TakeQuiz">Start Quiz</Link>
           </div>
         </header>
       </div>
