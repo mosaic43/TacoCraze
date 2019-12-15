@@ -54,7 +54,24 @@
     color: silver;
     font-family: fantasy;
     text-align: center;
-    margin-top: 2%;
+    margin-top: 15%;
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: rgb(37, 36, 36);
+    opacity: 0.9;
+    -moz-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+    -webkit-box-shadow: 5px 20px 3px rgba(0,0,0,.5);
+    box-shadow: 20px 10px 20px rgba(0,0,0,.5);
+    animation-name: textChange;
+    animation-duration: 25s;
+    font-size: calc(30px + 2vmin);
+  }
+  .text2 {
+    color: silver;
+    font-family: fantasy;
+    text-align: center;
+    margin-top: 15%;
+  
     animation-name: textChange;
     animation-duration: 25s;
     font-size: calc(30px + 2vmin);

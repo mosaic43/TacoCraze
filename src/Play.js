@@ -8,7 +8,7 @@ function Play() {
     return (
       <div className="App-Header">
            <img src="taco.png" className="App-logo" alt="logo" />
-        <div className="text">
+        <div className="text2">
          Extreme Taco Craze
         </div>
          <Link to="/Intro">Let's Play</Link>

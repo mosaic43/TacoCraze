@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
 import Intro from './Intro.js';
-import TakeQuiz from './TakeQuiz.js';
+// import TakeQuiz from './TakeQuiz.js';
+import MainQuiz from './QuizComponents/MainQuiz';
 import { Link } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -19,7 +20,7 @@ function App() {
         <Router>
           <Switch>
         <Route path="/Intro" component={Intro} exact/>
-        <Route path="/TakeQuiz" component={TakeQuiz} exact/>
+        <Route path="/MainQuiz" component={MainQuiz} exact/>
         <Route path="/" component={Play} exact/>
         </Switch>
         </Router>

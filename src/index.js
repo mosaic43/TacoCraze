@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import Intro from './Intro';
 import './Intro.css';
+import MainQuiz from './QuizComponents/MainQuiz';
 import * as serviceWorker from './serviceWorker';
 
 

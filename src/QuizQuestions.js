@@ -1,3 +1,5 @@
+import React from "react";
+
 var quizQuestions = [
     {
         question: "What day is National Taco Day in the United States?",
