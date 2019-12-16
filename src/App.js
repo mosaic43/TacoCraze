@@ -8,6 +8,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Switch } from 'react-router-dom';
 import Play from './Play.js';
+import GameOver from './GameOver/GameOver.js';
 
 
 
@@ -21,6 +22,7 @@ function App() {
           <Switch>
         <Route path="/Intro" component={Intro} exact/>
         <Route path="/MainQuiz" component={MainQuiz} exact/>
+        <Route path="/GameOver" component={GameOver} exact/>
         <Route path="/" component={Play} exact/>
         </Switch>
         </Router>

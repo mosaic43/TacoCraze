@@ -1,11 +1,12 @@
 import React from "react";
-// import { QuizData } from "./QuizData";
 import { Link } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Switch } from 'react-router-dom';
 import MainQuizStyle from './MainQuizStyle.css';
 import { quizData } from './quizData.js';
+import GameOver from '../GameOver/GameOver.js';
+
 
 
 class MainQuiz extends React.Component {
@@ -19,7 +20,6 @@ class MainQuiz extends React.Component {
   };
 
   loadQuizData = () => {
-    // console.log(quizData[0].question)
     this.setState(() => {
       return {
         questions: quizData[this.state.currentQuestion].question,
@@ -63,7 +63,7 @@ class MainQuiz extends React.Component {
       });
     }
   }
-  //check answer
+
   checkAnswer = answer => {
     this.setState({ myAnswer: answer, disabled: false });
     this.timer = setTimeout(() => { this.nextQuestionHandler()}, 1000);
@@ -82,35 +82,37 @@ class MainQuiz extends React.Component {
 if(this.state.score > 2) {
   gameResults = "Winner, winner, taco dinner!"
 } else {
-  gameResults = "Sorry, no tacos for you. . . :("
+  gameResults = "Sorry, no tacos for you. . . :( "
 }
     if (isEnd) {
       return (
-        <div className="result">
-          <h3>{gameResults} You scored{this.state.score} points </h3>
+        <div className="results">
+            
+          <h3>{gameResults} <br /> You scored {this.state.score} points </h3>
           <p>
             Here's the correct answers:
             <ul>
               {quizData.map((item, index) => (
-                <li className="ui floating message options" key={index}>
+                <li className="alerts mouse" key={index}>
                   {item.answer}
                 </li>
               ))}
             </ul>
           </p>
+          <Link to="/GameOver">Go get your tacos!</Link>
         </div>
       );
     } else {
       return (
-        <div className="App">
+        <div className="MainQuiz">
           <h1>{this.state.questions} </h1>
           <span>{`Question ${currentQuestion} of ${quizData.length}`}</span>
           <div>Score: {this.state.score}</div>
           {options.map(option => (
             <p
               key={option.id}
-              className={`ui floating message options
-         ${myAnswer === option ? "selected" : null}
+              className={` alerts floating QuizChoices
+         ${myAnswer === option ? "highlightChoice" : null}
          `}
          onClick={() => {this.checkAnswer(option)}}
             >
@@ -124,3 +126,51 @@ if(this.state.score > 2) {
 }
 
 export default MainQuiz;
+
+// render() {
+//   const { options, myAnswer, currentQuestion, isEnd } = this.state;
+//   let gameResults = "";
+// if(this.state.score > 2) {
+// gameResults = "Winner, winner, taco dinner!"
+// } else {
+// gameResults = "Sorry, no tacos for you. . . :( "
+// }
+//   if (isEnd) {
+//     return (
+//       <div className="results">
+          
+//         <h3>{gameResults} <br /> You scored {this.state.score} points </h3>
+//         <p>
+//           Here's the correct answers:
+//           <ul>
+//             {quizData.map((item, index) => (
+//               <li className="alerts mouse" key={index}>
+//                 {item.answer}
+//               </li>
+//             ))}
+//           </ul>
+//         </p>
+//         <Link to="/GameOver">Go get your tacos!</Link>
+//       </div>
+//     );
+//   } else {
+//     return (
+//       <div className="MainQuiz">
+//         <h1>{this.state.questions} </h1>
+//         <span>{`Question ${currentQuestion} of ${quizData.length}`}</span>
+//         <div>Score: {this.state.score}</div>
+//         {options.map(option => (
+//           <p
+//             key={option.id}
+//             className={` alerts floating QuizChoices
+//        ${myAnswer === option ? "highlightChoice" : null}
+//        `}
+//        onClick={() => {this.checkAnswer(option)}}
+//           >
+//             {option}
+//           </p>
+//         ))}
+//       </div>
+//     );
+//   }
+// }

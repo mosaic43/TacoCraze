@@ -1,55 +1,11 @@
 .Intro {
     text-align: center;
-    background-image: url("space1.png");
+    background-image: url("sky2.jpg");
     background-size: cover;
     width: 100vw;
     height: 100vh;
   }
   
-  .App-logo {
-    height: 30vmin;
-  }
-  
-  /* .Intro-header {
-    background-image: url("/public/space1.png");
-    background-size: cover;
-    min-height: 100vh; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-  } */
-  
-  .App-link {
-    color: #09d3ac;
-  }
-  /* The animation code */
-  @keyframes textChange {
-    5% {color: #09d3ac;}
-    20%   {color:rgb(233, 120, 248);}
-    20%  {color: yellow;}
-    20% {color: greenyellow;}
-    20%  {color: blue;}
-    20% {color: red}
-    20% {color: #09d3ac;}
-    20% {color: #09d3ac;}
-    20%   {color:rgb(233, 120, 248);}
-    20%  {color: yellow;}
-    20% {color: greenyellow;}
-    20%  {color: blue;}
-    50% {color: red}
-    100% {color: #09d3ac;}
-    10% {color: #09d3ac;}
-    25%   {color:rgb(233, 120, 248);}
-    25%  {color: yellow;}
-    25% {color: greenyellow;}
-    50%  {color: blue;}
-    50% {color: red}
-    100% {color: #09d3ac;}
-  }
- 
   .text {
     color: silver;
     font-family: fantasy;
@@ -57,13 +13,9 @@
     margin-top: 15%;
     margin-left: 20%;
     margin-right: 20%;
-    background-color: rgb(37, 36, 36);
-    opacity: 0.9;
-    -moz-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
-    -webkit-box-shadow: 5px 20px 3px rgba(0,0,0,.5);
-    box-shadow: 20px 10px 20px rgba(0,0,0,.5);
+    opacity: 1;
     animation-name: textChange;
-    animation-duration: 25s;
+    
     font-size: calc(30px + 2vmin);
   }
   .text2 {
@@ -86,4 +38,180 @@
     border-color: darkorchid;
     border-width: 2%;
   
+  }
+
+
+
+  /* Moving Text */
+
+  @keyframes textScroll {
+    0% {
+      position: absolute;
+      bottom: -5rem;
+      opacity: 0;
+    }
+  
+    75% {
+      position: absolute;
+      bottom: 40%;
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0;
+    }
+    
+  }
+  @keyframes textScroll2 {
+    0% {
+      position: absolute;
+      bottom: -5rem;
+      opacity: 0;
+    }
+  
+    20% {
+      position: absolute;
+      bottom: 25%;
+      opacity: 1;
+    }
+    75% {
+      position: absolute;
+      bottom: 60%;
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0;
+    }
+    
+  }
+  @keyframes textScroll3 {
+    0% {
+      position: absolute;
+      bottom: -5rem;
+      opacity: 0;
+    }
+  
+   
+    75% {
+      position: absolute;
+      bottom: 60%;
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 100;
+    }
+    
+  }
+  
+  .one {
+    font-size: 5rem;
+    position: absolute;
+   
+    bottom: 80%;
+    opacity: 0;
+    color: #F0EBA3;
+    animation-name: textScroll;
+    animation-delay: 0s;
+    animation-duration: 5s;
+  }
+  .two {
+    font-size: 5rem;
+    position: absolute;
+    left: 5%;
+    bottom: 25%;
+    opacity: 0;
+    color: #F0EBA3;
+    animation-name: textScroll;
+    animation-delay: 5s;
+    animation-duration: 5s;
+  }
+  .three {
+    font-size: 5rem;
+    position: absolute;
+    left: 15%;
+    bottom: 90%;
+    opacity: 0;
+    color: #F0EBA3;
+    animation-name: textScroll2;
+    animation-delay: 10s;
+    animation-duration: 5s;
+  }
+  .three2 {
+    font-size: 5rem;
+    position: absolute;
+    left: 60%;
+    bottom: 20%;
+    opacity: 0;
+    color: #F0EBA3;
+    animation-name: textScroll2;
+    animation-delay: 15s;
+    animation-duration: 5s;
+  }
+  .four {
+    font-size: 5rem;
+    position: absolute;
+    left: 30%;
+    bottom: 50%;
+    opacity: 0;
+    color: #F0EBA3;
+    animation-name: textScroll;
+    animation-delay: 20s;
+    animation-duration: 5s;
+  }
+  .five {
+    font-size: 5rem;
+    position: absolute;
+    left: 2%;
+    bottom: 25%;
+    opacity: 0;
+    color: #F0EBA3;
+    animation-name: textScroll;
+    animation-delay: 25s;
+    animation-duration: 10s;
+  }
+  .six {
+    font-size: 5rem;
+    position: absolute;
+    left: 60%;
+    bottom: 90%;
+    opacity: 0;
+    color: #F0EBA3;
+    animation-name: textScroll;
+    animation-delay: 30s;
+    animation-duration: 10s;
+  }
+  .seven {
+    font-size: 5rem;
+    position: absolute;
+    left: 2%;
+    bottom: 60%;
+    opacity: 0;
+    color: #F0EBA3;
+    animation-name: textScroll2;
+    animation-delay: 35s;
+    animation-duration: 10s;
+  }
+  .eight {
+    font-size: 5rem;
+    position: absolute;
+    left: 2%;
+    bottom: 50%;
+    opacity: 0;
+    color: #F0EBA3;
+    animation-name: textScroll;
+    animation-delay: 42s;
+    animation-duration: 10s;
+  }
+  .nine {
+    font-size: 5rem;
+    position: absolute;
+    left: 30%;
+    bottom: 50%;
+    opacity: 0;
+    color: #F0EBA3;
+    animation-name: textScroll;
+    animation-delay: 45s;
+    animation-duration: 20s;
   }

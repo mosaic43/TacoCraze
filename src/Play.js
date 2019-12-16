@@ -11,7 +11,8 @@ function Play() {
         <div className="text2">
          Extreme Taco Craze
         </div>
-         <Link to="/Intro">Let's Play</Link>
+        <br />
+         <Link to="/Intro"> <img src="ticket2.png" className="ticket" /></Link>
       </div>
     );
   }

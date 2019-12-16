@@ -5,33 +5,58 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Switch } from 'react-router-dom';
 import MainQuiz from './QuizComponents/MainQuiz.js'
-// import MainQuiz from './MainQuiz.js/index.js';
-// import QuizData from '/QuizComponents/QuizData';
+import troll from './troll.png';
+
 
   function Intro() {
     return (
       <div className="Intro">
         <header className="Intro-header">
           <div className="text">  
+          <div className="one">
           In the beginning there were tacos
+          </div>
           <br />
+          <div className="two">
           Lots and lots of tacos
+          </div>
           <br />
-          Then the evil emperor Taco Grinch
+          <div className="three">
+          Then the evil emperor Taco Troll
+          </div>
           <br />
+          <div className="three2">
+          <img src={troll} className="three2" />
+          </div>
+          <br />
+          <div className="four">
           Banned all tacos
+          </div>
+          <div className="four2">
+         
+          </div>
           <br /> 
-          Closed down nearly every taco truck and taqueria around
+          <div className="five">
+          Closing down nearly every taco truck 
+          and taqueria around
+          </div>
+          <div className="six">
+          Now you're hungry
+          </div>
+          <div className="seven">
+          And you've made it your mission to save the tacos
+          </div>
+          <div className="eight">
+          Complete the quests to save the day and take the tacos back
+          </div>
           <br />
-          
-          
-          </div>
-          <div className="text">
-        
-          </div>
-          <div className="text2">
+          <div className="nine">
             <Link to="/MainQuiz">Start Quiz</Link>
           </div>
+          
+          </div>
+          
+    
         </header>
       </div>
     );
