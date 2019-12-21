@@ -9,7 +9,7 @@ function Play() {
       <div className="App-Header">
            <img src="taco.png" className="App-logo" alt="logo" />
         <div className="text2">
-         Extreme Taco Craze
+         Taco Quest
         </div>
         <br />
          <Link to="/Intro"> <img src="ticket2.png" className="ticket" /></Link>

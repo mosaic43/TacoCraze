@@ -1,52 +1,31 @@
-export const MatchData = [
+export const MatchingData = [
     {
       id: 0,
-      image: "zero",
+      image: "Baja Shrimp Tacos",
       value: 0,
       display: false,
+      paired: false
     },
     {
-        id: 1,
-        image: "zero",
-        value: 0,
-        display: false,
-      },
-      {
-        id: 2,
-        image: "one",
-        value: 1,
-        display: false,
-      },
-      {
-        id: 3,
-        image: "one",
-        value: 1,
-        display: false,
-      },
-      {
-        id: 4,
-        image: "two",
-        value: 2,
-        display: false,
-      },
-      {
-        id: 5,
-        image: "two",
-        value: 2,
-        display: false,
-      },
-      {
-        id: 6,
-        image: "three",
-        value: 3,
-        display: false,
-      },
-      {
-        id: 7,
-        image: "three",
-        value: 3,
-        display: false,
-      },
-
+      id: 1,
+      image: "Baja Shrimp Tacos",
+      value: 0,
+      display: false,
+      paired: false
+    },
+    {
+      id: 2,
+      image: "Trompo Tacos",
+      value: 1,
+      display: false,
+      paired: false
+    },
+    {
+      id: 3,
+      image: "Trompo Tacos",
+      value: 1,
+      display: false,
+      paired: false
+    }
   ];
   

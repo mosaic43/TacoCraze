@@ -6,9 +6,11 @@ import Intro from './Intro';
 import './Intro.css';
 import MainQuiz from './QuizComponents/MainQuiz';
 import GameOver from './GameOver/GameOver';
+import FakeGameOver from './FakeGameOver';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import rootReducer from './reducers/rootReducer';
+import MatchGame from './Matching/MatchGame';
 
 const store = createStore(rootReducer);
 

@@ -1,0 +1,43 @@
+.GameOverMain {
+    text-align: center;
+  }
+
+  .FakeGameOver-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  /* The element to apply the animation to */
+  /* div {
+    animation-name: textChange;
+    animation-duration: 4s;
+  } */
+  .text {
+    color: #09d3ac;
+    font-family: fantasy;
+    animation-name: textChange;
+    animation-duration: 25s;
+    font-size: calc(30px + 2vmin);
+  }
+ 
+
+.truck {
+  width: 400px;
+  height: 500px;
+  -webkit-animation: taco 2s infinite  alternate;
+  animation: taco 1s infinite  alternate;
+}
+@-webkit-keyframes taco {
+0% { transform: translateX(0); }
+100% { transform: translateX(-20px); }
+}
+@keyframes taco {
+0% { transform: translateX(0); }
+100% { transform: translateX(-40px); }
+}

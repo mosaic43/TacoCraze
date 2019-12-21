@@ -108,7 +108,7 @@
   .one {
     font-size: 5rem;
     position: absolute;
-   
+    left: 10%;
     bottom: 80%;
     opacity: 0;
     color: #F0EBA3;
@@ -141,11 +141,11 @@
   .three2 {
     font-size: 5rem;
     position: absolute;
-    left: 60%;
-    bottom: 20%;
+    left: 55%;
+    bottom: 10%;
     opacity: 0;
     color: #F0EBA3;
-    animation-name: textScroll2;
+    animation-name: textScroll;
     animation-delay: 15s;
     animation-duration: 5s;
   }
@@ -174,12 +174,12 @@
   .six {
     font-size: 5rem;
     position: absolute;
-    left: 60%;
+    left: 50%;
     bottom: 90%;
     opacity: 0;
     color: #F0EBA3;
     animation-name: textScroll;
-    animation-delay: 30s;
+    animation-delay: 33s;
     animation-duration: 10s;
   }
   .seven {
@@ -190,7 +190,7 @@
     opacity: 0;
     color: #F0EBA3;
     animation-name: textScroll2;
-    animation-delay: 35s;
+    animation-delay: 40s;
     animation-duration: 10s;
   }
   .eight {
@@ -201,7 +201,7 @@
     opacity: 0;
     color: #F0EBA3;
     animation-name: textScroll;
-    animation-delay: 42s;
+    animation-delay: 45s;
     animation-duration: 10s;
   }
   .nine {
@@ -212,6 +212,6 @@
     opacity: 0;
     color: #F0EBA3;
     animation-name: textScroll;
-    animation-delay: 45s;
+    animation-delay: 50s;
     animation-duration: 20s;
   }

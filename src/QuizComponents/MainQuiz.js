@@ -99,7 +99,7 @@ if(this.state.score > 2) {
               ))}
             </ul>
           </p>
-          <Link to="/GameOver">Go get your tacos!</Link>
+          <Link to="/FakeGameOver">Go get your tacos!</Link>
         </div>
       );
     } else {
